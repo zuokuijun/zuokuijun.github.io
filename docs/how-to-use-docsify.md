@@ -1,17 +1,8 @@
-还记得我在上周发的[《V2.0 版本的 JavaGuide 面试突击版来啦！带着它的在线阅读版本来啦！》](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247486494&idx=1&sn=a17e8278bd9fc1354449f925ef990c25&chksm=cea243d5f9d5cac3b0b3b55769e162363256eb7fa483997c21b62cddb4ef2d583a2bcae0ac1a&token=1910196174&lang=zh_CN#rd)这篇文章中答应手把手教大家搭建一下下面一样的文档类型网站不？
 
 
-![](https://imgkr.cn-bj.ufileos.com/bf58b379-2006-47a3-b722-5c65dbd1b0f6.png)
-
-这篇文章 Guide 哥就手把手教大家搭建一个像下面这样的文档类型的网站，你可以用来当做项目的说明文档，也还可以当做自己专属的知识小仓库。
-
-![](https://imgkr.cn-bj.ufileos.com/c190b25c-e3c0-4c2c-a6b6-60a9a9dbb99e.png)
-
-官网教程的也很详细了，地址在这里：[https://docsify.js.org/#/zh-cn/quickstart](https://docsify.js.org/#/zh-cn/quickstart) ，不过我的这篇教程比较贴合实际使用。
-
-下面演示的所有内容的源文件在这里：https://github.com/Snailclimb/docsify-demo
-
-最终效果展示地址：https://snailclimb.gitee.io/docsify-demo/#/
+>  Docsify中文官网教程：[https://docsify.js.org/#/zh-cn/quickstart](https://docsify.js.org/#/zh-cn/quickstart) 
+>
+> Docsify documentation:[https://docsify.js.org/#/quickstart](https://docsify.js.org/#/quickstart)
 
 ## 一.前置条件
 
