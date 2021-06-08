@@ -17,7 +17,6 @@
 <p align="center">
 <img src="./images/opencv.jpg"/>
 </p>
-
 2、对下载的代码进行解压
 
 * sudo unzip  opencv4.5.2.zip （对文件进行解压）

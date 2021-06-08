@@ -16,6 +16,8 @@
 
 * Open CV 
 
+  * [OpenCV安装教程](./docs/OpenCV安装教程.md)
+
   * 特征提取
 
 * SLAM 14讲
