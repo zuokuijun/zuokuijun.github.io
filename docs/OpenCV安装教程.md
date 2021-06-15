@@ -83,9 +83,35 @@ sudo make install
 如果测试OpenCV是否安装成功呢，网上很多的教程都是利用IDE新建工程，或者自己手动写一个测试程序，虽然该方法也能够起到测试的作用，但是中间可能会出现其他问题，导致浪费不必要的时间，最佳的方式是采用**OpenCV自带的测试程序**
 
 * cd opencv-4.2.0/samples/cpp/example_cmake
+
 * sudo mkdir build
+
 * cd build
+
 * sudo make ..
+
 * Sudo make
-运行生成的可执行文件，此时可以调用摄像头采集图像，一般来说执行程序后便可看到画面
+  运行生成的可执行文件，此时可以调用摄像头采集图像，一般来说执行程序后便可看到画面
+
+## 七、Qt Creator 关联Open CV 库
+
+* 在新建工程的pro文件中，添加
+
+  ```c++
+  CONFIG += link_pkgconfig
+  PKGCONFIG += opencv
+  ```
+
+* 引入头文件与命名空间
+
+  ```c++
+  #include <opencv2/core/core.hpp>
+  #include <opencv2/highgui/highgui.hpp>
+  #include <opencv2/imgproc/imgproc.hpp>
+  #include <opencv2/opencv.hpp>
+  using namespace std;
+  using namespace cv;
+  ```
+
+  
 
