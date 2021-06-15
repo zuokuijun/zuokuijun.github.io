@@ -43,7 +43,7 @@
   ```
 
   * 显示一张图片，并且6秒后显示窗口关闭
-## 2、图像腐蚀
+## 二、图像腐蚀
 
 ```c++
     Mat image = imread("/home/zuokuijun/OpenCV/charter2/1.jpg");
@@ -60,7 +60,7 @@
 <img src="./images/fushi.png"/>
 </p>
 
-## 3、图像模糊
+## 三、图像模糊
 
 ```c++
       Mat image = imread("/home/zuokuijun/OpenCV/charter2/1.jpg");
@@ -75,7 +75,7 @@
  <img src="./images/blur.png"/>
 </p>
 
-## 4、边缘检测
+## 四、边缘检测
 
 ```c++
     Mat srcImage = imread("/home/zuokuijun/OpenCV/charter2/1.jpg");
@@ -99,7 +99,7 @@
 <img src="./images/canny.png"/>
 </p>
 
-## 5、读取并播放视频
+## 五、读取并播放视频
 
 **此处的代码与下一部分调用摄像头进行图像采集的代码基本类似，只是在生成VideoCapture对象时，这里在实例化的过程中需要指定播放视频所在的具体路径**
 
@@ -107,7 +107,7 @@
 <img src="./images/video.png"/>
 </p>
 
-## 6、调用摄像头采集图像
+## 六、调用摄像头采集图像
 
 ```c++
     VideoCapture capture(0);
