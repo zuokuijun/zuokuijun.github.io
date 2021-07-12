@@ -8,7 +8,7 @@
   
 * Python基础
 
-  [飞行器智能感知与控制实验室Python 简明教程](https://gitee.com/pi-lab/machinelearning_notebook/tree/master/0_python)
+  [Python 简明教程](./docs/python简明教程)
 
 * 数据结构与算法
 
@@ -29,7 +29,7 @@
   
 * 机器学习
   
-  [飞行器智能感知与控制实验室机器学习教程](https://gitee.com/pi-lab/machinelearning_notebook)
+  [机器学习简明教程](./docs/机器学习简明教程.md)
   
 * 理论力学
 
