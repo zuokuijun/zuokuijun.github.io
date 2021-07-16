@@ -5,9 +5,19 @@
 
 ## 作者介绍
 
-<p align="center">
-<img src="./images/zuokuijun.jpg" width="166" height="260"/>
+<p>
+<img align = "left" src="./images/zuokuijun.jpg" width="166" height="260"/>
 </p>
+
+
+
+
+
+
+
+
+
+
 
 **就读院校**：西北工业大学——飞行器智能感知与控制实验室
 
