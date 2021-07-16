@@ -1,12 +1,21 @@
-# 左奎军科研计划
+# 左奎军知识仓库
 
-### 记录学习心得、个人知识仓库
+- Github代码仓库地址：https://github.com/zuokuijun/zuokuijun.github.io
+- 在线阅读地址：https://zuokuijun.github.io/#/
 
-- 在线阅读地址：https://zuokuijun.gitee.io/zuokuijunblog/#/
-- Github：https://github.com/zuokuijun/zuokuijun.github.io
-- 码云：https://gitee.com/SnailClimb/JavaGuide-Interview
+## 作者介绍
 
-### 作者介绍
+**就读院校**：西北工业大学——飞行器智能感知与控制实验室
 
-**作者介绍:**  
+**合作单位**：中国空气动力研究与发展中心——空气动力学国家重点实验室
+
+**研究方向**：空气动力学、机器学习
+
+## 学术成果
+
+
+
+
+
+
 
