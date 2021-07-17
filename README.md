@@ -18,6 +18,8 @@
 
 
 
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+
 **就读院校**：西北工业大学——飞行器智能感知与控制实验室  
 
 **合作单位**：中国空气动力研究与发展中心——空气动力学国家重点实验室  
