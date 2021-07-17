@@ -6,12 +6,8 @@
 ## 作者介绍
 
 <p>
-<img align = "left" src="./images/zuokuijun.jpg" width="166" height="260"/>
+<img align = "left" src="./images/zuokuijun.jpg">
 </p>
-
-
-
-
 
 
 
@@ -24,6 +20,8 @@
 **合作单位**：中国空气动力研究与发展中心——空气动力学国家重点实验室
 
 **研究方向**：空气动力学、机器学习
+
+
 
 ## 学术成果
 
