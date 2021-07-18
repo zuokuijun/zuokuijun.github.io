@@ -3,15 +3,11 @@
 - Github代码仓库地址：https://github.com/zuokuijun/zuokuijun.github.io
 - 在线阅读地址：https://zuokuijun.github.io/#/
 
-## 作者介绍
+## 个人简介
 
 <p>
 <img align= "left" src="./images/zuokuijun.jpg">  
-</p>
-
-
-
-
+</p>  
 
 
 
