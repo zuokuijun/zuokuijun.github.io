@@ -1,17 +1,17 @@
-# 左奎军知识仓库
+# Zuokuijun's Knowledge Repository
 
-- Github代码仓库地址：https://github.com/zuokuijun/zuokuijun.github.io
-- 在线阅读地址：https://zuokuijun.github.io/#/
+- Github Repository URL：https://github.com/zuokuijun/zuokuijun.github.io
+- Online Reading URL：https://zuokuijun.github.io/#/
 
-## 个人简介
+## Personal Profile
 
-**就读院校**：西北工业大学——飞行器智能感知与控制实验室       
+**School**：Northwestern Polytechnical University（NWPU）——Aircraft Intelligent Sensing and Control Laboratory
 
-**联合培养单位**：中国空气动力研究与发展中心——空气动力学国家重点实验室      
+**Joint Training Unit**：China Aerodynamics Research and Development Center——State Key Laboratory of Aerodynamics      
 
-**研究方向**：空气动力学、机器学习        
+**Research Direction**：Aerodynamics、Machine Learning
 
-## 学术成果
+## Academic Achievements
 
 
 
