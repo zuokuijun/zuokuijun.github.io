@@ -32,6 +32,7 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 </head>
 <body>
   <!-- docsify-edit-on-github -->
@@ -65,12 +66,20 @@
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
    <!-- 字数统计 -->
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- 网页在线评论功能 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
   <script>
-    window.$docsify = {
-      disqus: 'shortname'
-    }
+    const gitalk = new Gitalk({
+      clientID: 'f2a0476e9d0c3d0fc4c6',
+      clientSecret: 'f0d0890d213778eda60df38849fcdc67dbf7f0d6',
+      repo: 'zuokuijun.github.io',
+      owner: 'zuokuijun',
+      admin: ['zuokuijun'],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+     })
   </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>
 </body>
 
 </html>
