@@ -33,9 +33,16 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  <script type="text/javascript"
-		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-		chtml.js"></script>
+  <script> 
+	MathJax = {
+  	tex: {
+    inlineMath: [['$', '$']],
+    processEscapes: true
+  	}
+	 };
+	</script>
 </head>
 <body>
   <!-- docsify-edit-on-github -->
