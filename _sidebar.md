@@ -40,7 +40,7 @@
 
 * 空气动力学
   
-  * [N-S方程](./docs/theory.pdf)
+  * [N-S方程](./docs/d.md)
   
 * 流体力学
   
