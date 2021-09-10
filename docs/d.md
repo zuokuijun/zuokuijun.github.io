@@ -1,7 +1,3 @@
 ### Here are some of your previous markdown contents
-blah blah blah
-
-```pdf
-./pdf/theory.pdf
-```
+[pDF](./pdf/theory.pdf)
 

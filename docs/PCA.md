@@ -5,9 +5,9 @@
 * PCA寻找尽可能体现数据之间差异的属性
 * PCA寻找能够尽可能重建原本属性
 
+  [通俗易懂的讲解什么是PCA？——主成分分析](https://www.zhihu.com/question/41120789/answer/474222214)
 
-
-```matlab
+```python
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Matlab code to produce PCA animations shown here:
 % http://stats.stackexchange.com/questions/2691
