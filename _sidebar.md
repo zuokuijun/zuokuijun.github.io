@@ -46,6 +46,8 @@
   
 * 流体力学
   
+  * [随体导数(物质导数的定义)](./docs/material_derivaive.md)
+  
 * 问题汇总分析
   
   * [Ceres库以及g2o库的安装总结](./docs/Ceres库以及g2o库的安装总结.md)
