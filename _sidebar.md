@@ -46,7 +46,7 @@
   
 * 流体力学
   
-  * [随体导数(物质导数的定义)](./docs/material_derivaive.md)
+  * [随体导数(物质导数的定义)](./docs/material_derivative.md)
   
 * 问题汇总分析
   
