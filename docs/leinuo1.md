@@ -1,4 +1,4 @@
-# 雷诺输运定理的推导
+# 雷诺输运定理的推导（一）
 
 设在 ![[公式]](https://www.zhihu.com/equation?tex=t) 时刻的流场中，单位体积流体的物理量分布函数为 ![[公式]](https://www.zhihu.com/equation?tex=%5CPhi%28%5Cboldsymbol+r%2Ct%29) ，则流体域 ![[公式]](https://www.zhihu.com/equation?tex=%5Ctau_0) 内流体的总物理量 ![[公式]](https://www.zhihu.com/equation?tex=I%3D%5Ciiint+_%7B%5Ctau_0%7D+%5CPhi%28%5Cboldsymbol+r%2C+t%29%5Cmathrm%7Bd%7D+%5Ctau_0) 。当 ![[公式]](https://www.zhihu.com/equation?tex=%5CPhi%28%5Cboldsymbol+r%2Ct%29) 为 ![[公式]](https://www.zhihu.com/equation?tex=%5Crho) ，![[公式]](https://www.zhihu.com/equation?tex=%5Crho+%5Cboldsymbol+V) ，![[公式]](https://www.zhihu.com/equation?tex=%5Crho+%28%5Cboldsymbol+r+%5Ctimes+%5Cboldsymbol+V%29) ，![[公式]](https://www.zhihu.com/equation?tex=%5Crho+%5Cleft%28e%2B%5Cboldsymbol+V%5E2%2F2%5Cright%29) 时， ![[公式]](https://www.zhihu.com/equation?tex=I) 分别代表系统的**质量**，**动量**，**动量矩**及**总能量**。 ![[公式]](https://www.zhihu.com/equation?tex=I) 对时间的变化率即 ![[公式]](https://www.zhihu.com/equation?tex=%5Cdfrac%7B%5Cmathrm%7BD%7DI%7D%7B%5Cmathrm%7BD%7Dt%7D+%3D%5Cdfrac%7B%5Cmathrm+D%7D%7B%5Cmathrm+Dt%7D%5Ciiint+_%7B%5Ctau_0%7D%5CPhi%5Cmathrm%7Bd%7D%5Ctau_0) 称为**系统导数**。显然，在计算该积分对时间的导数时，需要考虑被积函数 ![[公式]](https://www.zhihu.com/equation?tex=%5CPhi) 随时间的变化及流动域体积 ![[公式]](https://www.zhihu.com/equation?tex=%5Ctau_0) 本身的变化，即 ![[公式]](https://www.zhihu.com/equation?tex=I%28t%29%3D%5Ciiint_%7B%5Ctau_0%28t%29%7D%5CPhi%28%5Cboldsymbol+r%2C+t%29%5Cmathrm+d+%5Ctau_0)。
 
@@ -36,5 +36,5 @@
 
 式 ![[公式]](https://www.zhihu.com/equation?tex=%286%29) 又被称为**雷诺第二输运定理**。
 
-详细细节请参考：[随体导数的理解](https://zhuanlan.zhihu.com/p/89710260)
+详细细节请参考：[雷诺输运定理的推导](https://zhuanlan.zhihu.com/p/89710260)
 
