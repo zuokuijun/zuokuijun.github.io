@@ -39,6 +39,7 @@
 * 空气动力学
   
   * [N-S方程](./docs/d.md)
+  * [常用术语总结](./docs/professional.md)
   
 * 流体力学
   
