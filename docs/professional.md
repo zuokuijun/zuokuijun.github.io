@@ -4,11 +4,15 @@
 
 雷诺数：表征流动是层流还是湍流的无量纲数。 $Re=\frac{\rho VL}{\mu}$。这里，$\rho$为流体的密度；$V$为流体的运动速度；$L$为流场中的某种特征尺度（雷诺在圆管试验中，所用的特征尺度是圆管的直径$D$）；$\mu$为流体的动力粘性系数。
 
-雷诺应力:flight_departure::      
+雷诺应力:flight_departure:: 对湍流边界层进行平均处理后，方程中的切应力多出了一项额外的切应力——雷诺应力，即：
+$$
+\overline \tau=\tau_{lam}+\tau_{turb},		\qquad \tau_{lam}=\mu \frac{\partial \overline \mu}{\partial y}, \qquad \tau_{turb}=- \rho \overline {\mu^,\nu^,}
+$$
+上式中的$\mu^,$和$\nu^,$分别表示流向和法向的速度脉动量，也就是瞬时速度和平均速度之差，这种速度分解方法是雷诺提出来的，称为雷诺平均方法。
 
 马赫数:carousel_horse::                      
 
-定常与非定常:man_in_tuxedo::
+定常与非定常:man_in_tuxedo::如果我们所关心的空间内的所有点上的流动都不随时间而改变就是定常的，反之就是非定常流动。
 
 体积力与表面力  :airplane:: 
 
