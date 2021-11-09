@@ -42,7 +42,7 @@
   * [常用术语总结](./docs/professional.md)
   
 * 流体力学
-  
+
   * [随体导数(物质导数的定义)](./docs/material_derivative.md)
   * [雷诺输运定理的推导(一)](./docs/leinuo1.md)
   * [雷诺输运定理的推导(二)](./docs/leinuo2.md)
@@ -54,7 +54,13 @@
   * [粘性剪切流动]()
   * [可压缩流动基础]()
   * [流动相似与无量纲数]()
-  
+
+* 流体力学软件
+
+  *  [PointWise]()
+  * [风雷软件-PHengLEI](./docs/PHengLEI)
+  * [数据后处理软件-Tecplot]()
+
 * 问题汇总分析
   
   * [Ceres库以及g2o库的安装总结](./docs/Ceres库以及g2o库的安装总结.md)
