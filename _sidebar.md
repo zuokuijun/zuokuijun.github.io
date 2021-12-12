@@ -60,6 +60,7 @@
   *  [PointWise]()
   * [风雷软件-PHengLEI](./docs/PHengLEI)
   * [数据后处理软件-Tecplot](./docs/d.md)
+  * [docker](./docs/docker.md)
 
 * 问题汇总分析
   
@@ -70,6 +71,8 @@
   * [在终端使用快捷命令快速打开指定的应用程序](./docs/在终端使用快捷命令快速打开指定的应用程序.md)
   
   * [mac安装tecplot](./docs/tecplot.md)
+  
+  * [ubuntu18.04 install i711700k显卡驱动](./docs/i7.md)
   
   * [电脑组装清单](./docs/电脑组装清单.md)
   
