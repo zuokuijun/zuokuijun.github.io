@@ -72,6 +72,8 @@
   
   * [mac安装tecplot](./docs/tecplot.md)
   
+  * [OpenFOAM5安装教程](./docs/openfoam5.md)
+  
   * [ubuntu18.04 install i711700k显卡驱动](./docs/i7.md)
   
   * [电脑组装清单](./docs/电脑组装清单.md)
