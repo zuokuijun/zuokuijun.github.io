@@ -8,7 +8,7 @@
   
 * Python基础
 
-  [Python 简明教程](./docs/python简明教程)
+  * [Python 简明教程](./docs/python简明教程)
 
 * 数据结构与算法
 
@@ -26,7 +26,12 @@
 * 机器学习
   
   * [机器学习简明教程](./docs/机器学习简明教程.md)
-  
+  * KNN——K近邻
+  * KMeans——K均值
+  * Least Squares——最小二乘
+  * Logistic Regression——逻辑回归
+  * Perceptron——感知机
+  * Multi-layer Perception——多层感知机
   * [PCA—主成分分析](./docs/PCA.md)
   
 * 理论力学
