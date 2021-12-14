@@ -24,28 +24,16 @@
   * [OpenCV 学习心得](./docs/OpenCV学习教程.md)
 
 * 机器学习
-  
+
   * [机器学习简明教程](./docs/机器学习简明教程.md)
   * KNN——K近邻
-    * 原理
-    * 代码
   * KMeans——K均值
-    	* 原理
-    	* 代码
   * Least Squares——最小二乘
-    	* 原理
-    	* 代码
   * Logistic Regression——逻辑回归
-    	* 原理
-    	* 代码
   * Perceptron——感知机
-    	* 原理
-    	* 代码
   * Multi-layer Perception——多层感知机
-    	* 原理
-    	* 代码
   * [PCA—主成分分析](./docs/PCA.md)
-  
+
 * 理论力学
 
   * [理论力学入门](./docs/理论力学入门.md) 
