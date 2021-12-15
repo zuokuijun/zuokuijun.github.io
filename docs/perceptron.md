@@ -6,13 +6,21 @@
 
 > 当细胞A的轴突足以接近以激发细胞B，并反复持续地对细胞B放电，一些生长过程或代谢变化将发生在某一个或这两个细胞内，以致A作为对B放电的细胞中的一个，导致突触传递效能的增加。
 
-![neuron_cell](https://gitee.com/pi-lab/machinelearning_notebook/raw/master/5_nn/images/neuron_cell_cn.png)
+<p align="center">
+  <img src="./images/perceptron1.png"/>
+</p>
+
+
 
 ## 2、感知机模型
 
 如何使用机器学习方法来实现这样一个过程呢？那么感知机就构建了一个类似的结构。通过下图可以看到：Σ这个部分表示感知机模型的一个加权求和操作。首先有一系列的输入信号，当这些输入信号被传送到细胞体，那么这个细胞体会对其进行加和操作，这个加和实际上就是我们的一个加权Σ，加权之后就会产生一个加权值，加权之后通过求和得到一个值，当这个值大于0时，或者大于某一个阈值时，那么就会产生一个输出，这样的话我们就通过一个简单的数学计算，模拟了一个神经元的感知过程，他有输入，有输出，细胞体是他中间的一个计算过程，那么这个就是我们的感知机模型。
 
-![perceptron](https://gitee.com/pi-lab/machinelearning_notebook/raw/master/5_nn/images/perceptron.png)
+<p align="center">
+  <img src="./images/perceptron2.png"/>
+</p>
+
+
 
 假设输入空间(特征向量)为**X**⊆ℝn，输出空间为**Y**∈−1,+1。输入x∈**X** 表示实例的特征向量，对应于输入空间的点；输出y∈**Y**表示示例的类别。由输入空间到输出空间的函数为:
 $$
