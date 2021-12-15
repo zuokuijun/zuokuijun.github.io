@@ -30,7 +30,7 @@
   * KMeans——K均值
   * Least Squares——最小二乘
   * Logistic Regression——逻辑回归
-  * Perceptron——感知机
+  * [Perceptron——感知机](./docs/perceptron.md)
   * Multi-layer Perception——多层感知机
   * [PCA—主成分分析](./docs/PCA.md)
 
