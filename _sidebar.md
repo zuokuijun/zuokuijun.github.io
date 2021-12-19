@@ -31,7 +31,7 @@
   * Least Squares——最小二乘
   * Logistic Regression——逻辑回归
   * [Perceptron——感知机](./docs/perceptron.md)
-  * Multi-layer Perception——多层感知机
+  * [Multi-layer Perception——多层感知机](./docs/multiPerceptron.md)
   * [PCA—主成分分析](./docs/PCA.md)
 
 * 理论力学
