@@ -134,7 +134,7 @@ $$
 </p>
 ​		如上图所示，如果我们要更新权重$w_5$，可根据整体误差对权重$w_5$求偏导：
 $$
-\frac{\partial E_{total}}{\partial w_5}=\frac{\partial E_{total}}{\partial out_{o1}}*\frac{\partial out{o1}}{\partial net_{o1}}*\frac{\partial net_{o1}}{\partial w_5}
+\frac{\partial E_{total}}{\partial w_5}=\frac{\partial E_{total}}{\partial out_{o1}}*\frac{\partial out_{o1}}{\partial net_{o1}}*\frac{\partial net_{o1}}{\partial w_5}
 $$
 ---
 $$
@@ -160,8 +160,59 @@ $$
 $$
 ---
 
+* **3、隐含层到隐含层的权重更新**
 
+  <p align="center">
+      <img src="./images/loss2.png" />
+  </p>
 
+  与上述参数更新过程类似，这里以更新参数w1为例:
+  $$
+  \frac{\partial E_{total}}{\partial w_1}=\frac{\partial E_{total}}{\partial out_{h1}}*\frac{\partial out_{h1}}{\partial net_{h1}}*\frac{\partial net_{h1}}{\partial w_1}\\
+  \frac{\partial E_{total}}{\partial out_{h1}}=\frac{\partial E_{o1}}{\partial out_{h1}}+\frac{\partial E_{o2}}{\partial out_{h1}}
+  $$
+  首先计算$\frac{\partial E_{o1}}{\partial out_{h1}}$:
+  $$
+  \frac{\partial E_{o1}}{\partial out_{h1}}=\frac{\partial E_{o1}}{\partial net_{o1}}*\frac{\partial net_{o1}}{\partial out_{h1}} \\
+  \frac{\partial E_{o1}}{\partial net_{o1}}=\frac{\partial E_{o1}}{\partial out_{o1}}*\frac{\partial out_{o1}}{\partial net_{o1}}=0.74136507*0.186815602=0.138498562\\
+  net_{o1}=w_5*out_{h1}+w_6*out_{h2}+b_2*1 \\
+  \frac{\partial net_{o1}}{\partial out_{h1}}=w_5=0.40 \\
+  \frac{\partial E_{o1}}{\partial out_{h1}}=0.138498562*0.40=0.055399425
+  $$
+  其次计算，$\frac{\partial E_{o2}}{\partial out_{h1}}$:
+  $$
+  \frac{\partial E_{o2}}{\partial out_{h1}}=\frac{\partial E_{o2}}{\partial net_{o2}}*\frac{\partial net_{o2}}{\partial out_{h1}} \\
+  \frac{\partial E_{o2}}{\partial net_{o2}}=\frac{\partial E_{o2}}{\partial out_{o2}}*\frac{\partial out_{o2}}{\partial net_{o2}}=-0.217071535*0.175510053=-0.03809823661\\
+  net_{o1}=w_5*out_{h1}+w_6*out_{h2}+b_2*1 \\
+  \frac{\partial net_{o2}}{\partial out_{h1}}=w_7=0.50 \\
+  \frac{\partial E_{o2}}{\partial out_{h1}}=-0.03809823661*0.50=-0.01904911831
+  $$
+  从而可得：
+  $$
+  \frac{\partial E_{total}}{\partial out_{h1}}=\frac{\partial E_{o1}}{\partial out_{h1}}+\frac{\partial E_{o2}}{\partial out_{h1}}=0.055399425+-0.01904911831=0.03635030669
+  $$
+  又因为：
+  $$
+  \frac{\partial out_{h1}}{\partial net_{h1}}=out_{h1}*(1-out_{h1})=0.59326999*(1-0.59326999)=0.241300709
+  $$
+  其次，
+  $$
+  net_{h1}=w_1*i_1+w_2*i_2+b_1*1 \\
+  \frac{\partial net_{h1}}{\partial w_1}=i_1=0.05
+  $$
+  最终得到参数$w_1$的更新数值：
+  $$
+  \frac{\partial E_{total}}{\partial w_1}=0.03635030669*0.241300709*0.05=0.000438568 \\
+  w_1^+=w_1-n*\frac{\partial E_{total}}{\partial w_1}=0.149780716
+  $$
+  
+
+​		同理，可依次更新权重$w_2,w_3,w_4$:
+$$
+w_2^+=0.19956143\\
+w_3^+=0.24975114 \\
+w_4^+=0.29950229
+$$
 
 
 ## 4、代码实现
