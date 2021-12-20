@@ -132,7 +132,6 @@ $$
 <p align="center">
     <img src="./images/loss1.png"/>
 </p>
-
 ​		如上图所示，如果我们要更新权重$w_5$，可根据整体误差对权重$w_5$求偏导：
 $$
 \frac{\partial E_{total}}{\partial w_5}=\frac{\partial E_{total}}{\partial out_{o1}}*\frac{\partial out{o1}}{\partial net_{o1}}*\frac{\partial net_{o1}}{\partial w_5} \\
@@ -148,6 +147,7 @@ E_{total}=E_{out1}+E_{out2} ,E=\frac{1}{2}(target-out)^2
 \\
 依次对余下的权重参数进行更新：w_6^+=0.408666186,w_7^+=0.511301270,w_8^+=0.561370121
 $$
+
 
 * **3、隐含层到隐含层的权重更新**
 
