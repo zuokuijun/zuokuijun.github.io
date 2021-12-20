@@ -134,21 +134,22 @@ $$
 </p>
 ​		如上图所示，如果我们要更新权重$w_5$，可根据整体误差对权重$w_5$求偏导：
 $$
-\frac{\partial E_{total}}{\partial w_5}=\frac{\partial E_{total}}{\partial out_{o1}}*\frac{\partial out{o1}}{\partial net_{o1}}*\frac{\partial net_{o1}}{\partial w_5} 
+\frac{\partial E_{total}}{\partial w_5}=\frac{\partial E_{total}}{\partial out_{o1}}*\frac{\partial out{o1}}{\partial net_{o1}}*\frac{\partial net_{o1}}{\partial w_5}
+$$
+---
+$$
+E_{total}=E_{out1}+E_{out2} ,E=\frac{1}{2}(target-out)^2  \\
+out_{o1}=\frac{1}{1+e^{-net_{o1}}} &\\net_{o1}=w_5*out_{h1}+w_6*out_{h2}+b_2*1
 $$
 
-$$
-E_{total}=E_{out1}+E_{out2} ,E=\frac{1}{2}(target-out)^2
-\\out_{o1}=\frac{1}{1+e^{-net_{o1}}} &\\net_{o1}=w_5*out_{h1}+w_6*out_{h2}+b_2*1\\
-$$
-
+---
 $$
 \frac{\partial E_{total}}{\partial out_{o1}}=2*\frac{1}{2}(target_{o1}-out_{o1})^{2-1}*-1+0=-(0.01-0.75136507)=0.74136507\\
 \frac{\partial out_{o1}}{\partial net_{o1}}=out_{o1}(1-out_{o1})=0.75136507(1-0.75136507)=0.186815602 \\
 \frac{net_{o1}}{\partial w_5}=1*out_{h1}=0.593269992\\
 \frac{\partial E_{total}}{\partial w_5}=0.74136507*0.186815602*0.593269992=0.082167041
 $$
-
+---
 $$
 对w_5进行更新：w_5^+=w_5-n*\frac{\partial E_{total}}{\partial w_5}=0.4-0.5*0.082167041=0.35891648
 $$
@@ -156,23 +157,7 @@ $$
 $$
 依次对余下的权重参数进行更新：w_6^+=0.408666186,w_7^+=0.511301270,w_8^+=0.561370121
 $$
-
-
-
-$$
-\frac{\partial E_{total}}{\partial w_5}=\frac{\partial E_{total}}{\partial out_{o1}}*\frac{\partial out{o1}}{\partial net_{o1}}*\frac{\partial net_{o1}}{\partial w_5} \\
-\\
-E_{total}=E_{out1}+E_{out2} ,E=\frac{1}{2}(target-out)^2
-\\out_{o1}=\frac{1}{1+e^{-net_{o1}}} &\\net_{o1}=w_5*out_{h1}+w_6*out_{h2}+b_2*1\\
-\\
-\frac{\partial E_{total}}{\partial out_{o1}}=2*\frac{1}{2}(target_{o1}-out_{o1})^{2-1}*-1+0=-(0.01-0.75136507)=0.74136507\\
-\frac{\partial out_{o1}}{\partial net_{o1}}=out_{o1}(1-out_{o1})=0.75136507(1-0.75136507)=0.186815602 \\
-\frac{net_{o1}}{\partial w_5}=1*out_{h1}=0.593269992\\
-\frac{\partial E_{total}}{\partial w_5}=0.74136507*0.186815602*0.593269992=0.082167041 \\
-对w_5进行更新：w_5^+=w_5-n*\frac{\partial E_{total}}{\partial w_5}=0.4-0.5*0.082167041=0.35891648
-\\
-依次对余下的权重参数进行更新：w_6^+=0.408666186,w_7^+=0.511301270,w_8^+=0.561370121
-$$
+---
 
 
 
