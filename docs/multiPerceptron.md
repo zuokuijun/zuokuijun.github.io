@@ -138,10 +138,11 @@ $$
 $$
 ---
 $$
-E_{total}=E_{out1}+E_{out2} ,E=\frac{1}{2}(target-out)^2  \\
-out_{o1}=\frac{1}{1+e^{-net_{o1}}} &\\net_{o1}=w_5*out_{h1}+w_6*out_{h2}+b_2*1
+E_{total}=E_{out1}+E_{out2}  \\
+E=\frac{1}{2}(target-out)^2  \\
+out_{o1}=\frac{1}{1+e^{-net_{o1}}} \\
+net_{o1}=w_5*out_{h1}+w_6*out_{h2}+b_2*1
 $$
-
 ---
 $$
 \frac{\partial E_{total}}{\partial out_{o1}}=2*\frac{1}{2}(target_{o1}-out_{o1})^{2-1}*-1+0=-(0.01-0.75136507)=0.74136507\\
