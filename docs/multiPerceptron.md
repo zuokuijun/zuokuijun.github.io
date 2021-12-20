@@ -103,7 +103,7 @@ $$
 
 ## 3、反向传播
 
-	### 神经网络反向传播实例
+### 神经网络反向传播实例
 
   <p align="center">
       <img src="./images/fcn2.png"/>
@@ -133,6 +133,8 @@ $$
     <img src="./images/loss1.png"/>
 </p>
 ​		如上图所示，如果我们要更新权重$w_5$，可根据整体误差对权重$w_5$求偏导：
+
+
 $$
 \frac{\partial E_{total}}{\partial w_5}=\frac{\partial E_{total}}{\partial out_{o1}}*\frac{\partial out{o1}}{\partial net_{o1}}*\frac{\partial net_{o1}}{\partial w_5} \\
 ------------------------------------------\\
@@ -149,7 +151,6 @@ E_{total}=E_{out1}+E_{out2} ,E=\frac{1}{2}(target-out)^2
 $$
 
 
-* **3、隐含层到隐含层的权重更新**
 
 
 
