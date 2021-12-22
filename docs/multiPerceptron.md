@@ -7,6 +7,8 @@
 >[飞行器智能感知与控制实验室布树辉教授](https://gitee.com/pi-lab/machinelearning_notebook/blob/master/5_nn/2-mlp_bp.ipynb)
 >
 >[神经网络图在线编辑](http://alexlenail.me/NN-SVG/index.html)
+>
+>[https://gitee.com/martin64/mnist-pytorch](https://gitee.com/martin64/mnist-pytorch)
 
 ## 1、定义
 
@@ -219,9 +221,151 @@ $$
 
 ```python
 
+import torch
+import torchvision
+import torch.nn as nn #import torch neural network library
+import torch.nn.functional as F #import functional neural network module
+from torch.utils.data import DataLoader
+import matplotlib.pyplot as plt
+import torch.optim as optim #import optimizer neural network module
+from torch.autograd import Variable #import variable that connect to automatic differentiation
+
+class MLPNet(torch.nn.Module):
+
+    # 定义多层神经网络架构
+    def __init__(self):
+        super(MLPNet, self).__init__()  # load super class for training data
+        self.fc1 = nn.Linear(784, 320)
+        self.fc2 = nn.Linear(320, 50)
+        self.fc3 = nn.Linear(50, 10)
+        self.relu = nn.ReLU()
+
+        # 1个epoch表示将所有数据训练一遍，这里训练数据总计60000，一个batch_size设置为1000，则60个batch_size为一个epoch周期
+        self.n_epochs = 20
+        # 定义网络训练的batch size
+        self.batch_size_train = 1000
+        # 定义网络测试的batch size
+        self.batch_size_test = 1000
+        # 定义网络训练的学习率
+        self.learning_rate = 0.01
+        # 定义网络训练的参数损失
+        self.momentum = 0.5
+        # self.log_interval = 10
+
+    # 对神经网络进行前向计算
+    def forward(self, x):  # feed forward
+        layer1 = x.view(-1, 784)  # make it flat from 0 - 320
+        layer2 = self.relu(self.fc1(layer1))  # layer2 = layer1 -> fc1 -> relu
+        layer3 = self.relu(self.fc2(layer2))  # layer3 = layer2 -> fc2 -> relu
+        layer4 = self.relu(self.fc3(layer3))  # layer4 = layer3 -> fc2 -> relu
+        return F.log_softmax(layer4, dim=1)  # softmax activation to layer4
+
+        # 生成MINST手写数字识别的训练以及测试数据
+
+    def data_generate(self):
+        # 下载生成训练样本数据，总计包含60000个样本，但是每次仅根据batch size的大小来取固定数量的数据来进行训练
+        train_loader = torch.utils.data.DataLoader(
+            torchvision.datasets.MNIST('../data/', train=True, download=False,
+                                       transform=torchvision.transforms.Compose([
+                                           torchvision.transforms.ToTensor(),
+                                           torchvision.transforms.Normalize(
+                                               (0.1307,), (0.3081,))
+                                       ])),
+            batch_size=self.batch_size_train, shuffle=True)
+        # 下载生成测试数据，总计包含10000个样本，同样根据batch size的大小来取得固定数量的数据来进行测试
+        test_loader = torch.utils.data.DataLoader(
+            torchvision.datasets.MNIST('../data/', train=False, download=False,
+                                       transform=torchvision.transforms.Compose([
+                                           torchvision.transforms.ToTensor(),
+                                           torchvision.transforms.Normalize(
+                                               (0.1307,), (0.3081,))
+                                       ])),
+            batch_size=self.batch_size_test, shuffle=True)
+        return train_loader, test_loader
+
+    def plot_MNIST(self):
+        train_loder, test_loader = self.data_generate()
+        examples = enumerate(train_loder)
+        batch_idx, (example_data, example_targets) = next(examples)
+        # example_data  torch.Size([1000, 1, 28, 28]) 每个batch size包含测试数据的个数、通道数以及图片的大小
+        # example_targets 每个数据对应的标签数值
+        print(example_targets)
+        print(example_data.shape)
+        plt.figure()
+        for i in range(6):
+            # plt.subplot(231)表示把显示界面分割成2*3的网格 其中，第一个参数是行数，第二个参数是列数，第三个参数表示图形的标号。
+            plt.subplot(2, 3, i + 1)
+            # tight_layout会自动调整子图参数，使之填充整个图像区域
+            plt.tight_layout()
+            # 因为这里图像是黑白的只有一个RGB通道，因此打印数组的第二个数值为0
+            plt.imshow(example_data[i][0], cmap='Greys', interpolation='none')
+            plt.title("Ground Truth: {}".format(example_targets[i]))
+            plt.xticks([])
+            plt.yticks([])
+        plt.show()
+
+    def mlp_train(self):
+        # 初始化优化器，这里的优化器为随机梯度下降优化
+        optimizer = optim.SGD(self.parameters(), lr=self.learning_rate, momentum=self.momentum)
+        # 获得神经网络的训练数据以及测试数据
+        train_loader, test_loader = self.data_generate()
+        # 遍历batch size 中的每个数据
+        for epoch in range(self.n_epochs):
+            model.train()
+            for batch_idx, (data, label) in enumerate(train_loader):
+                # print("----batchsize-----", batch_idx)
+                data, label = Variable(data), Variable(label)
+                # 初始化梯度优化器，将梯度清零
+                optimizer.zero_grad()
+                # 正向传播进行计算，得到输出的loss损失
+                output = model(data)  # enter data into model, save in output
+                train_loss = F.nll_loss(output, label)
+                # 反向传播计算梯度
+                train_loss.backward()  # compute gradient
+                # 更新网络权重参数
+                optimizer.step()  # update weight
+                if batch_idx % 10 == 0:
+                    print('Train Epochs: {}, batch size: {}, Loss: {:.6f} '.format(epoch, batch_idx, train_loss.item()))
+                    # plt.figure()
+                    # plt.imshow(data[batch_idx][0], cmap='Greys', interpolation='none')
+                    # plt.show()
+                # model.mlp_test(test_loader=test_loader)
+            model.eval()  # evaluation/testing
+            total = 0
+            correct = 0
+            for data, label in test_loader:  # separate data and label
+                data, label = Variable(data, volatile=True), Variable(label)  # create torch variable and enter data and label into it
+                output = model(data)  # enter data into model, save in output
+                # 得到预测数值
+                _, predicted = torch.max(output.data, dim=1)
+                # 统计预测数据与标签数据相等的字符个数
+                correct += (predicted == label).sum().item()
+                # 统计总的测试数据数目
+                total += label.size(0)
+            print('accuracy on validate set:%d %%\n' % (100 * correct / total))
+            #     test_loss += F.nll_loss(output, label, size_average=False).item()  #
+            #     pred = output.data.max(1, keepdim=True)[1]  # prediction result
+            #     correct += pred.eq(label.data.view_as(pred)).cpu().sum()  # if label=pred then correct++
+            # test_loss /= len(test_loader.dataset)  # compute test loss
+            # print('\nAverage Loss: {:.4f}, Accuracy: {:.0f}'.format(test_loss, 100. * correct / len(test_loader.dataset)))
+
+if __name__ == '__main__':
+    model = MLPNet()
+    model.plot_MNIST()
+    # model.mlp_train()
+    # # 保存训练的模型
+    # torch.save(model.state_dict(), "../MLP/MLP_trained_model.pth")
+
+
+
+
 ```
 
 
+
+<p align="center">
+    <img src="./images/MPL_MNIST.png"/>
+</p>
 
 
 
