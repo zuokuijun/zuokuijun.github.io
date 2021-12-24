@@ -63,7 +63,8 @@
 
 * 流体力学软件
 
-  *  [PointWise]()
+  *  [30P30N翼型网格划分](./docs/30p30n_pointwise.md)
+  *  [30P30N翼型求解](./docs/30p30n_fluent.md)
   * [风雷软件-PHengLEI](./docs/PHengLEI)
   * [数据后处理软件-Tecplot](./docs/d.md)
   * [docker](./docs/docker.md)
