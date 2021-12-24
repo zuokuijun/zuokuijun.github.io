@@ -9,36 +9,49 @@
 * 这里需要说明的是， 原始的翼型网格数据格式一般第一行为当前翼型类别名称，后面紧跟的是X Y 轴的坐标，为该数据格式Point Wise是无法识别的，需要将第一行代表翼型类别的数据修改为坐标点的**总和**。比如这里针对30P30N翼型而言，其导入的数据格式为(三段机翼，因此存在三段翼型数据)：
 
   `301`
+  
   -0.02482	-0.04248	0
+  
   0.0099	0.00247	0
+  
   ... ... ... ...
-
+  
   ... ... ... ...
-
+  
   -0.02518	-0.04369	0
+  
   -0.02482	-0.04248	0
+  
   `596`
+  
   0.02567	-0.0036	0
+  
   0.02564	-0.00365	0
-
+  
   ... ... ... ...
-
+  
   ... ... ... ...
 
   0.39135	0.00266	0
+
   0.02567	-0.0036	0
+  
   `306`
+  
   0.48666	-6.87E-04	0
+  
   0.48688	-0.00108	0
+  
   ... ... ... ...
-
+  
   ... ... ... ...
-
+  
   0.48656	-4.99E-04	0
+  
   0.48666	-6.87E-04	0
-
+  
   导入的翼型如下图所示。
-
+  
   <p align="center">
       <img src="./images/30p30_1.png"/>
   </p>
@@ -117,9 +130,70 @@
 
 ### 四、 画出机翼远场区域
 
+<p align="center">
+    <img src="./images/30p30_9.png"/>
+</p>
 
+### 五、画出整个流场范围内的非结构化网格
 
+Ctrl + K开始绘制非结构化网格，需要注意的是在正式绘制之前需要选择网格类型为非机构化网格。
 
+<p align="center">
+    <img src="./images/30p30_10.png"/>
+</p>
 
+需要保证外部流场区域的方向需要机翼周围方向应该是相反的
 
+<p align="center">
+    <img src="./images/30p30_11.png"/>
+</p>
 
+<p align="center">
+    <img src="./images/30p30_12.png"/>
+</p>
+
+全部设置好之后点击应用，此时就得到一个非结构化网格
+
+<p align="center">
+    <img src="./images/30p30_13.png"/>
+</p>
+
+### 六、画出层流边界层
+
+[point wise compute wall spacing](https://www.pointwise.com/yplus/index.html)
+
+* Grid > T-Rex 添加边界层
+
+* Boundary Conditions 添加边界条件，将机翼设置为Wall，Cell Types 设置为Triangles and Quads ，Full Layer: 0，Max Layers: 100
+
+  <p align="center">
+      <img src="./images/30p30_14.png"/>
+  </p>
+
+* 点击初始化图标，生成边界层区域网格
+
+<p align="center">
+    <img src="./images/30p30_15.png"/>
+</p>
+
+<p align="center">
+    <img src="./images/30p30_16.png"/>
+</p>
+
+* 设置网格维度、求解器，边界条件等信息
+
+  <p align="center">
+      <img src="./images/30p30_20.png"/>
+  </p>
+
+<p align="center">
+    <img src="./images/30p30_18.png"/>
+</p>
+
+* 设置CAE > set  Volume conditions  研究对象为流体
+
+<p align="center">
+    <img src="./images/30p30_19.png"/>
+</p>
+
+* 选择Domains ，然后选择Export > CAE
