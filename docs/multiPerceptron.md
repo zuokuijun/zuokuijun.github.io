@@ -9,6 +9,8 @@
 >[神经网络图在线编辑](http://alexlenail.me/NN-SVG/index.html)
 >
 >[https://gitee.com/martin64/mnist-pytorch](https://gitee.com/martin64/mnist-pytorch)
+>
+>[MLP网络结构的在线演示](http://playground.tensorflow.org/#activation=relu&batchSize=13&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0.001&noise=5&networkShape=4,2&seed=0.03136&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=regression&initZero=false&hideText=false)
 
 ## 1、定义
 
@@ -366,7 +368,6 @@ if __name__ == '__main__':
 <p align="center">
     <img src="./images/MPL_MNIST.png"/>
 </p>
-
 
 
 
