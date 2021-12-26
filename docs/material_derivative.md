@@ -1,21 +1,46 @@
 # 流体力学中物质导数或者随体导数的理解
 
-​		在流体力学里，我们会遇到温度、密度、压强等这样的**标量场**（scalar field），定义这样的一个函数，需要以空间和时间为自变量，记为 ![[公式]](https://www.zhihu.com/equation?tex=f%28x%2C+y%2C+z%2C+t%29)，表示在空间坐标 ![[公式]](https://www.zhihu.com/equation?tex=%28x%2C+y%2C+z%29) 处和时间 t 时的物理量（温度、密度、压强等）。一个流体元在 t 时刻从位置 ![[公式]](https://www.zhihu.com/equation?tex=%28x%2C+y%2C+z%29) 运动到了 ![[公式]](https://www.zhihu.com/equation?tex=%28x+%2B+%5CDelta+x%2C+y+%2B+%5CDelta+y%2C+z+%2B+%5CDelta+z%29) ，会有一个物理量的变化 ![[公式]](https://www.zhihu.com/equation?tex=%5CDelta+f) ，其全导数为 ![[公式]](https://www.zhihu.com/equation?tex=%5CDelta+f+%3D+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+x%7D+%5CDelta+x+%2B+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+y%7D+%5CDelta+y+%2B+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+z%7D+%5CDelta+z+%2B+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+t%7D+%5CDelta+t+%2B+o%28%5Crho%29) 。 ![[公式]](https://www.zhihu.com/equation?tex=%5Crho+%3D+%5Csqrt+%7B%28%5CDelta+x%29%5E2+%2B+%28%5CDelta+y%29%5E2+%2B+%28%5CDelta+z%29%5E2+%2B+%28%5CDelta+t%29%5E2%7D) ， ![[公式]](https://www.zhihu.com/equation?tex=o%28%5Crho%29) 是 ![[公式]](https://www.zhihu.com/equation?tex=%5Crho+%5Crightarrow+0) 时的**高阶无穷小**。而坐标x，y，z又可以是关于时间 t 的函数，两边同时除以 ![[公式]](https://www.zhihu.com/equation?tex=%5CDelta+t) 得 ![[公式]](https://www.zhihu.com/equation?tex=%5Cfrac+%7B%5CDelta+f%7D%7B%5CDelta+t%7D+%3D+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+x%7D+%5Cfrac+%7B%5CDelta+x%7D%7B%5CDelta+t%7D+%2B+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+y%7D+%5Cfrac+%7B%5CDelta+y%7D%7B%5CDelta+t%7D+%2B+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+z%7D+%5Cfrac+%7B%5CDelta+z%7D%7B%5CDelta+t%7D+%2B+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+t%7D+%2B+%5Cfrac+%7B+o%28%5Crho%29%7D%7B%5CDelta+t%7D) 。让 ![[公式]](https://www.zhihu.com/equation?tex=%5CDelta+t) 趋近于0，差分变微分，可丢掉尾部的高阶无穷小量， ![[公式]](https://www.zhihu.com/equation?tex=%5Cfrac+%7Bdf%7D%7Bdt%7D+%3D+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+x%7D+%5Cfrac+%7Bdx%7D%7Bdt%7D+%2B+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+y%7D++%5Cfrac+%7Bdy%7D%7Bdt%7D+%2B+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+z%7D++%5Cfrac+%7Bdz%7D%7Bdt%7D+%2B+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+t%7D) 。**随体导数**在此时被定义——流体质点在运动时所具有的物理量对时间的全导数。
-
-　　**是公式都会追求短而美**（多看看麦克斯韦方程组，你能从中领略到公式的美）。我们学的 Nabla 算子（符号 ![[公式]](https://www.zhihu.com/equation?tex=%5Cnabla) ，即倒立的 ![[公式]](https://www.zhihu.com/equation?tex=%5CDelta) ）选择在这个时候登场。在高等代数里， ![[公式]](https://www.zhihu.com/equation?tex=%5Cnabla) 是一个非常方便的数学符号，一个符号配合起来可以担当三个语义——
-**梯度**：作用于标量 ![[公式]](https://www.zhihu.com/equation?tex=f%28x%2C+y%2C+z%29) ，得到矢量。 ![[公式]](https://www.zhihu.com/equation?tex=grad+f+%3D+%5Cnabla+f+%3D+%28%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+x%7D%2C+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+y%7D%2C+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+z%7D%29) 
-**散度**：作用于矢量 ![[公式]](https://www.zhihu.com/equation?tex=%28f_x%2C+f_y%2C+f_z%29) ，得到标量。 ![[公式]](https://www.zhihu.com/equation?tex=div+%5Cvec+f+%3D+%5Cnabla+%5Ccdot++%5Cvec+f+%3D+%5Cfrac+%7B%5Cpartial+f_x%7D%7B%5Cpartial+x%7D+%2B+%5Cfrac+%7B%5Cpartial++f_y%7D%7B%5Cpartial+y%7D+%2B+%5Cfrac+%7B%5Cpartial++f_z%7D%7B%5Cpartial+z%7D) 
-**旋度**：作用于矢量 ![[公式]](https://www.zhihu.com/equation?tex=%28f_x%2C+f_y%2C+f_z%29) ，得到矢量。 ![[公式]](https://www.zhihu.com/equation?tex=curl+%5Cvec+f+%3D+%5Cnabla+%5Ctimes++%5Cvec+f+%3D+%5Cbegin%7Bvmatrix%7D+%5Cvec+i+%26+%5Cvec+j+%26+%5Cvec+k+%5C%5C+%5Cfrac+%7B%5Cpartial%7D%7B%5Cpartial+x%7D+%26+%5Cfrac+%7B%5Cpartial%7D%7B%5Cpartial+y%7D+%26+%5Cfrac+%7B%5Cpartial%7D%7B%5Cpartial+z%7D+%5C%5C+f_x+%26+f_y+%26+f_z+%5Cend%7Bvmatrix%7D+%3D+%28%5Cfrac+%7B%5Cpartial+f_z%7D+%7B%5Cpartial+y%7D+-+%5Cfrac+%7B%5Cpartial++f_y%7D+%7B%5Cpartial+z%7D%2C+%5Cfrac+%7B%5Cpartial+f_x%7D+%7B%5Cpartial+z%7D+-+%5Cfrac+%7B%5Cpartial+f_z%7D+%7B%5Cpartial+x%7D%2C+%5Cfrac+%7B%5Cpartial+f_y%7D+%7B%5Cpartial+x%7D+-+%5Cfrac+%7B%5Cpartial+f_x%7D+%7B%5Cpartial+y%7D%29) 。
-位移 ![[公式]](https://www.zhihu.com/equation?tex=%5Cvec+s+%3D+%28x%2C+y%2C+z%29) 是关于时间的函数，对时间求导得到速度 ![[公式]](https://www.zhihu.com/equation?tex=%5Cvec+v+%3D+%28%5Cfrac+%7Bdx%7D%7Bdt%7D%2C+%5Cfrac+%7Bdy%7D%7Bdt%7D%2C+%5Cfrac+%7Bdz%7D%7Bdt%7D%29) 。
- 于是，前面定义的式子记作![[公式]](https://www.zhihu.com/equation?tex=%5Cfrac+%7Bdf%7D%7Bdt%7D+%3D+%5Cvec+v+%5Ccdot+%5Cnabla+f+%2B+%5Cfrac+%7B%5Cpartial+f%7D%7B%5Cpartial+t%7D) 。中间的点是向量的点乘（dot product)运算，也叫内积。
-我们来分解一下这个式子。
-随体导数 = 对流导数 + 当地导数。
+​		在流体力学里，我们会遇到温度、密度、压强等这样的**标量场**（scalar field），定义这样的一个函数，需要以空间和时间为自变量，记为$f(x,y,z,t)$ ，表示在空间坐标 $(x,y,z)$ 处和时间 t 时的物理量（温度、密度、压强等）。一个流体元在 t 时刻从位置$(x,y,z)$ 运动到了$(x+ \Delta x, y+\Delta y, z+ \Delta z)$ ，会有一个物理量的变化$\Delta f$ ，其全导数为:
+$$
+\Delta f = \frac{\partial f}{\partial x} \Delta x +\frac{\partial f}{\partial y} \Delta y+\frac{\partial f}{\partial z} \Delta z+ \frac{\partial f}{\partial t} \Delta t+o(\rho) \\
+\rho=\sqrt{(\Delta x)^2+(\Delta y)^2+(\Delta z)^2+(\Delta t)^2}
+$$
+这里， $o(\rho)$ 是 $\rho \rightarrow 0$时的高阶无穷小。而坐标$x,y,z$又是关于时间$t$的函数， 两边同时除以$\Delta t$得:
+$$
+\frac{\Delta f}{\Delta t}=\frac{\partial f}{\partial x} \frac{\Delta x}{\Delta t}+\frac{\partial f}{\partial y} \frac{\Delta y}{\Delta t}+\frac{\partial f}{\partial z} \frac{\Delta z}{\Delta t}+\frac{o(\rho)}{\Delta t}
+$$
+让$\Delta t$趋向于0，差分可变为微分，可丢掉尾部的高阶无穷小：
+$$
+\frac{df}{dt}=\frac{\partial f}{\partial x} \frac{dx}{dt}+\frac{\partial f}{\partial y} \frac{dy}{dt}+\frac{\partial f}{\partial z} \frac{dz}{dt}+\frac{\partial f}{\partial t}
+$$
+**随体导数**在此时被定义——流体质点在运动时所具有的物理量对时间的全导数。在高等代数里，$\nabla$ 是一个非常方便的数学符号，一个符号配合起来可以担当三个语义——
+**梯度**：作用于标量$f(x,y,z)$ ,得到矢量。
+$$
+gradf = \nabla f = (\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} , \frac{\partial f}{\partial z})
+$$
+**散度**：作用于矢量$(f_x,f_y,f_z)$ ，得到标量。
+$$
+div \overrightarrow{f}=\nabla.\overrightarrow f=\frac{\partial f_x}{\partial x}+\frac{\partial f_y}{\partial y} + \frac{\partial f_z}{\partial z}
+$$
+ **旋度**：作用于矢量$(f_x,f_y,f_z)$，得到矢量。 
+$$
+curl \overrightarrow f=\nabla \times \overrightarrow f=\left [ \begin{matrix}
+\overrightarrow i& \overrightarrow j & \overrightarrow k\\
+\frac{\partial}{\partial x}& \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+f_x & f_y & f_z 
+\end{matrix} \right ] =(\frac{\partial f_z}{\partial y}-\frac{\partial f_y}{\partial z},\frac{\partial f_x}{\partial z}-\frac{\partial f_z}{\partial x},\frac{\partial f_y}{\partial x}-\frac{\partial f_x}{\partial y})
+$$
+位移$\overrightarrow s=(x,y,z)$是关于时间的函数，对时间求导得到速度$\overrightarrow v=(\frac{dx}{dt},\frac{dy}{dt},\frac{dz}{dt})$ 于是，前面定义的式子记作：
+$$
+\frac{df}{dt}=\overrightarrow v.\nabla f+\frac{\partial f}{\partial t}
+$$
+中间的点是向量的点乘（dot product)运算，也叫内积。我们来分解一下这个式子。`随体导数 = 对流导数 + 当地导数`。
 **对流导数**（convective derivative）也叫位变导数、迁移导数，反映了空间变化对物理量的影响。
 **当地导数**（domain derivative)也叫时变导数、区域导数、局部导数，反映了时间变化对物理量的影响。
 
-　举个很贴切的例子。在你乘坐高铁的时候，车厢间的电子屏幕会显示实时的速度和温度。你可以把这块电子屏当成流体元以便理解，电子屏幕需要给出的是高铁**行驶到的地点处，当前时间点**的温度。这个温度是**行走中的**温度，它与空间和时间都有关系，单独的空间或时间都不足以描述。
+举个很贴切的例子。在你乘坐高铁的时候，车厢间的电子屏幕会显示实时的速度和温度。你可以把这块电子屏当成流体元以便理解，电子屏幕需要给出的是高铁**行驶到的地点处，当前时间点**的温度。这个温度是**行走中的**温度，它与空间和时间都有关系，单独的空间或时间都不足以描述。
 
-　　如果取密度 ![[公式]](https://www.zhihu.com/equation?tex=%5Crho) 为质点的物理量，则密度的随体导数为 ![[公式]](https://www.zhihu.com/equation?tex=%5Cfrac+%7Bd%5Crho%7D+%7Bdt%7D) 。对于不可压缩的流体，质点的密度在运动过程中保持不变，所以有 ![[公式]](https://www.zhihu.com/equation?tex=%5Cfrac+%7Bd%5Crho%7D+%7Bdt%7D+%3D+0) 。
+如果取密度$\rho$为质点的物理量，则密度的随体导数为$\frac{d \rho}{dt}$ 。对于不可压缩的流体，质点的密度在运动过程中保持不变，所以有$\frac{d \rho}{dt}=0$。
 
 ---
 
