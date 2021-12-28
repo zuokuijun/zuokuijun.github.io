@@ -87,35 +87,7 @@ $$
   <img src="./images/controlVolume.png" />
 </p>
 
-对于运动的流体其穿过任意固定表面的质量流量等于（密度）$\times$ （表面面积）$\times$（垂直于表面的速度分量）。因此，通过面积$dS$的质量流量微元为：
-$$
-\rho V_n dS=\rho V.dS
-$$
-这里假定流出控制体的方向为正，则**通过控制面流出控制体的净质量流量**为:
-$$
-B=\iint \limits _S \rho V.d S
-$$
-针对体积微元$dV$，其质量为$\rho dV$。因此控制体内总质量为:
-$$
-\iiint \limits_{V}\rho dV
-$$
-此时，控制体内质量的增加率为：
-$$
-\frac{\partial}{\partial t} \iiint \limits_{V} \rho d V
-$$
-进一步，在上述式子后面添加一个负号就可以表示**控制体内质量减少的时间变化率**：
 
-因为前面我们讨论了：`通过控制面S流出控制体的净质量流量=控制体内质量减少的时间变化率`
-
-从而可以得到：
-$$
-\iint \limits _S \rho V.d S=-\frac{\partial}{\partial t} \iiint \limits_{V} \rho d V
-$$
-进一步，化简：
-$$
-\iint \limits _S \rho V.d S+\frac{\partial}{\partial t} \iiint \limits_{V} \rho d V =0
-$$
-上述方程就是以固定的有限控制体为研究对象，从欧拉思想出发推导得到的连续方程。
 
 
 
