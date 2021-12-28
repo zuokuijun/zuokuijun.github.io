@@ -54,7 +54,8 @@
 * 流体力学
 
   * [随体导数(物质导数的定义)](./docs/material_derivative.md)
-  * [连续性方程](./docs/continuous.md)
+  * [连续性方程（一）](./docs/continuous1.md)
+  * [连续性方程（二）](./docs/continuous2.md)
 
   * [雷诺输运定理的推导(一)](./docs/leinuo1.md)
   * [雷诺输运定理的推导(二)](./docs/leinuo2.md)
