@@ -6,6 +6,8 @@
     <img src="./images/weituan1.png">
 </p>
 
+ 欧拉观点下的质量守恒可以理解为：
+
 位置固定的无穷小微团质量的变化 =  流入无穷小微团质量 - 流出无穷小微团质量
 
 位置固定的无穷小微团质量的变化率=（流入无穷小微团质量 - 流出无穷小微团质量）的变化率
@@ -19,7 +21,9 @@ $$
 \frac{\partial dm}{\partial t}=\frac{\partial \rho dxdydz}{\partial t}=\frac{\partial \rho}{\partial t}dxdydz
 $$
 下面考虑无穷小流体微团的流入和流出。根据泰勒公式的定义：对于一个函数，$x_0$点的值为$f(x_0)$，那么$x_0+h$的值可以通过下述方程求得：
-
+$$
+f(x_0+h) \approx f(x_0)+f^`(x_0)h
+$$
 
 
 
