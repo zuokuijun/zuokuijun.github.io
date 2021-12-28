@@ -26,6 +26,8 @@ $$
 $$
 f(x_0+h) \approx f(x_0)+f^`(x_0)h
 $$
+
+
 如图所示，针对无穷小流体微团而言，立方体左侧单位面积的质量流量为$\rho u$，其表示单位时间内流入单位面积的质量。同时立方体左侧的面积为$dydz$，因此有单位时间内流入的质量为$\rho u dy dz$。而对于立方体右侧单位时间内流出单位面积的质量可以通过一阶泰勒展开式求出：$\rho u + \frac{\partial \rho u}{\partial x} dx$。同样的，立方体右侧的面积为$dydz$，因此单位时间内流出流体微团的质量为:
 $$
 (\rho u+\frac{\partial \rho u}{\partial x}dx)dydz
@@ -54,6 +56,7 @@ $$
 $$
 \frac{\partial \rho}{\partial t}+\frac{\partial \rho u}{\partial x}+\frac{\partial \rho v}{\partial y}+\frac{\partial \rho w}{\partial z}=0
 $$
+
 
 ### 随流体运动的无穷小流体微团连续方程的推导
 
