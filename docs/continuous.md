@@ -55,5 +55,30 @@ $$
 \frac{\partial \rho}{\partial t}+\frac{\partial \rho u}{\partial x}+\frac{\partial \rho v}{\partial y}+\frac{\partial \rho w}{\partial z}=0
 $$
 
+### 随流体运动的无穷小流体微团连续方程的推导
+
+下面主要考虑随流体运动的无穷小流体微团。这个微团有固定的质量，但是它的形状和体积会在移动过程中发生改变。这里将流体微团固定的质量以及可变的体积分别用$\delta m$和$\delta V$表示,此时有：
+$$
+\delta m=\rho \delta V
+$$
+因为在流体微团运动的整个过程中质量是守恒的，因此其质量变化对时间的变化率为零，这里根据物质导数的定义，我们可以得到:
+$$
+\frac{D(\delta m)}{Dt}=0
+$$
+结合上述方程，可进一步得到:
+$$
+\frac{D(\rho \delta V)}{Dt}=\delta V \frac{D \rho}{D t}+\rho \frac{D(\delta V)}{Dt}
+$$
+可以进一步的化简为：
+$$
+\frac{D \rho}{D t}+\rho [\frac{1}{\delta V} \frac{D(\delta V)}{Dt}]=0
+$$
+上述中的第二项表示的就是速度散度，表示的是每单位体积运动着的流体微团，体积相对于变化的时间变化率，即可得到：
+$$
+\frac{D \rho}{Dt}+\rho \nabla.V=0
+$$
+
 ### 空间位置固定的有限控制体连续方程的推导
+
+
 
