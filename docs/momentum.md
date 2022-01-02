@@ -54,6 +54,60 @@ z方向的动量方程:\rho \frac{D_w}{D_t}=-\frac{\partial \rho}{\partial z}+\f
 $$
 因为上述推导是基于运动的流体微团得到的，因此上述方程组是非守恒的，为了纪念法国人`M.Navier`和英国人`G.Stokes`，上述方程统称为纳维-斯托克斯方程，也就是大家所熟知的NS方程。那如何得到守恒的NS方程呢？继续往下讨论。。。 。。。
 
+将上述非守恒形式的动量方程，结合物质导数的定义进一步简化为:
+$$
+\rho \frac{DU}{Dt}=- \nabla \rho+\nabla. \tau  + \rho F \\
+\rho (\frac{\partial U}{\partial t}+U.\nabla U)=- \nabla \rho+\nabla. \tau + \rho F
+$$
+将连续性方程左右同乘以U，有：
+$$
+U \frac{\partial \rho}{\partial t}+U \nabla.(\rho U)=0
+$$
+将上述连续方程与动量方程相加：
+$$
+U \frac{\partial \rho}{\partial t}+U \nabla.(\rho U)+\rho (\frac{\partial U}{\partial t}+U.\nabla U)=- \nabla \rho+\nabla. \tau + \rho F_x
+$$
+进一步化简，得到守恒形式的动量方程为:
+$$
+\frac{\partial \rho \mathbf{U}}{\partial t}+\nabla \cdot(\rho \mathbf{U U})=-\nabla p+\nabla \cdot \tau +\rho F
+$$
+若将其展开，则有：
+$$
+\frac{\partial(\rho u)}{\partial t}+\nabla \cdot(\rho u V)=-\frac{\partial p}{\partial x}+\frac{\partial \tau_{x x}}{\partial x}+\frac{\partial \tau_{y x}}{\partial y}+\frac{\partial \tau_{x z}}{\partial z}+\rho f_{x} \\
+\frac{\partial(\rho v)}{\partial t}+\nabla \cdot(\rho v \boldsymbol{V})=-\frac{\partial p}{\partial y}+\frac{\partial \tau_{x y}}{\partial x}+\frac{\partial \tau_{y y}}{\partial y}+\frac{\partial \tau_{z y}}{\partial z}+\rho f_{y}\\
+\frac{\partial(\rho w)}{\partial t}+\nabla \cdot(\rho w \boldsymbol{V})=-\frac{\partial p}{\partial z}+\frac{\partial \tau_{x z}}{\partial x}+\frac{\partial \tau_{y z}}{\partial y}+\frac{\partial \tau_{z z}}{\partial z}+\rho f_{z}
+$$
+上述方程就是纳维-斯托克斯方程的守恒形式。
+
+17世纪末牛顿指出，流体的切应力与应变的时间变化率，也就是速度梯度，是成正比的。这样的流体被称为牛顿流体。在空气动力学中，流体都可以被看做是牛顿流体。对于这样的流体，斯托克斯在1845年得到：
+$$
+\begin{aligned}
+&\tau_{x x}=\lambda(\nabla \cdot V)+2 \mu \frac{\partial u}{\partial x} \\
+&\tau_{y y}=\lambda(\nabla \cdot V)+2 \mu \frac{\partial v}{\partial y} \\
+&\tau_{z}=\lambda(\nabla \cdot V)+2 \mu \frac{\partial w}{\partial z} \\
+&\tau_{x y}=\tau_{y x}=\mu\left(\frac{\partial v}{\partial x}+\frac{\partial u}{\partial y}\right) \\
+&\tau_{x z}=\tau_{z x}=\mu\left(\frac{\partial u}{\partial z}+\frac{\partial w}{\partial x}\right) \\
+&\tau_{y z}=\tau_{z y}=\mu\left(\frac{\partial w}{\partial y}+\frac{\partial v}{\partial z}\right)
+\end{aligned}
+$$
+其中$\mu$是分子的粘性系数，$lambda$是第二粘性系数。斯托克斯提出假设，认为：
+$$
+\lambda=-\frac{2}{3} \mu
+$$
+将上述式子带入守恒的动量方程中，可以得到完整的守恒形式的纳维-斯托克斯方程（N-S方程）
+$$
+\begin{gathered}
+\frac{\partial(\rho u)}{\partial t}+\frac{\partial\left(\rho u^{2}\right)}{\partial x}+\frac{\partial(\rho u v)}{\partial y}+\frac{\partial(\rho u w)}{\partial z}=-\frac{\partial p}{\partial x}+\frac{\partial}{\partial t}\left(\lambda \nabla \cdot V+2 \mu \frac{\partial u}{\partial x}\right)+ \\
+\frac{\partial}{\partial y}\left[\mu\left(\frac{\partial v}{\partial x}+\frac{\partial u}{\partial y}\right)\right]+\frac{\partial}{\partial z}\left[\mu\left(\frac{\partial u}{\partial z}+\frac{\partial w}{\partial x}\right)\right]+\rho f_{x} \\
+\frac{\partial(\rho v)}{\partial t}+\frac{\partial(\rho u v)}{\partial x}+\frac{\partial\left(\rho v^{2}\right)}{\partial y}+\frac{\partial(\rho v w)}{\partial z}=-\frac{\partial p}{\partial y}+\frac{\partial}{\partial x}\left[\mu\left(\frac{\partial v}{\partial x}+\frac{\partial u}{\partial y}\right)\right]+ \\
+\frac{\partial}{\partial y}\left(\lambda \nabla \cdot V+2 \mu \frac{\partial v}{\partial y}\right)+\frac{\partial}{\partial z}\left[\mu\left(\frac{\partial w}{\partial y}+\frac{\partial v}{\partial z}\right)\right]+\rho f_{y} \\
+\frac{\partial(\rho w)}{\partial t}+\frac{\partial(\rho u w)}{\partial x}+\frac{\partial(\rho v w)}{\partial y}+\frac{\partial\left(\rho w^{2}\right)}{\partial z}=-\frac{\partial p}{\partial z}+\frac{\partial}{\partial x}\left[\mu\left(\frac{\partial u}{\partial z}+\frac{\partial w}{\partial x}\right)\right]+ \frac{\partial}{\partial y}\left[\mu\left(\frac{\partial w}{\partial y}+\frac{\partial v}{\partial z}\right)\right]+\frac{\partial}{\partial z}\left(\lambda \nabla \cdot V+2 \mu \frac{\partial w}{\partial z}\right)+\rho f_{z}
+\end{gathered}
+$$
+
+$$
+
+$$
 
 
 
