@@ -57,7 +57,7 @@
   * [连续性方程（一）](./docs/continuous1.md)
   * [连续性方程（二）](./docs/continuous2.md)
   * [动量方程](./docs/momentum.md)
-
+* [能量方程](./docs/energy.md)
   * [雷诺输运定理的推导(一)](./docs/leinuo1.md)
   * [雷诺输运定理的推导(二)](./docs/leinuo2.md)
   * [流体与流体力学]()
