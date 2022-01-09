@@ -20,7 +20,7 @@
   
 * PyTorch
 
-  * 
+  * [torch](./docs/torch.ipynb)
   
 * Open CV 
 
