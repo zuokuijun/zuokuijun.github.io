@@ -20,7 +20,7 @@
   
 * PyTorch
 
-  * [torch](./docs/torch.ipynb)
+  * [数据集准备与加载](./docs/dataset.md)
   
 * Open CV 
 
