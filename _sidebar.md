@@ -21,6 +21,7 @@
 * PyTorch
 
   * [数据集准备与加载](./docs/dataset.md)
+  * [卷积神经网络](./docs/CNN.md)
   
 * Open CV 
 
