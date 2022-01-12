@@ -239,5 +239,121 @@ for data in dataLoader:
 
 
 
+### 7、神经网络实战
+
+```python
+# -*- coding: utf-8 -*-
+# @Time    : 2022/1/11 11:31 下午
+# @Author  : zuokuijun
+# @Email   : zuokuijun13@163.com
+
+import  torch
+import  torchvision
+from  torch.utils.data  import DataLoader
+from  torch import  nn
+from model import *
+from torch.utils.tensorboard import SummaryWriter
 
 
+transform = torchvision.transforms.Compose([
+    torchvision.transforms.ToTensor()
+])
+# 训练数据集
+train_data = torchvision.datasets.CIFAR10("../CIFAR10/data", train=True, download=True,transform=transform)
+# 测试数据集
+test_data = torchvision.datasets.CIFAR10("../CIFAR10/data", train=False, download=True, transform=transform)
+
+test_len = len(test_data)
+train_loader = DataLoader(train_data, batch_size=64)
+test_loader = DataLoader(test_data, batch_size=64)
+
+# 判断当前机器是否支持GPU训练
+
+
+
+
+cnn = model()
+
+train_step = 0
+test_step = 0
+
+epoch = 10
+
+# 定义损失函数
+if torch.cuda.is_available():
+    loss = nn.CrossEntropyLoss().cuda()
+else:
+    loss = nn.CrossEntropyLoss()
+
+# 定义优化器
+optim = torch.optim.SGD(cnn.parameters(), lr=0.01)
+writer = SummaryWriter("train_model")
+for i in range(epoch):
+    print("---------------------开始第{}轮网络训练-----------------".format(i+1))
+    for data in train_loader:
+        imgs, target = data
+        if torch.cuda.is_available():
+           imgs = imgs.cuda()
+           target = target.cuda()
+        output = cnn(imgs)
+        target_loss = loss(output, target)
+        optim.zero_grad()
+        target_loss.backward()
+        optim.step()
+        train_step = train_step+1
+        # 每一百步打印loss
+        if train_step % 100 == 0:
+            print("神经网络训练次数[{}], Loss:{}".format(train_step, target_loss.item()))
+            # 绘制训练神经网络时的损失函数变化曲线
+            writer.add_scalar("train_loss", target_loss.item(), train_step)
+
+    # 一个epoch训练结束，对模型进行测试
+    test_total_loss =0
+    test_accuracy = 0
+    with torch.no_grad():
+        for data in  test_loader:
+            imgs,target = data
+            if torch.cuda.is_available():
+                imgs = imgs.cuda()
+                target = target.cuda()
+            output = cnn(imgs)
+            test_loss = loss(output, target)
+            # 计算测试数据集整体的一个损失
+            test_total_loss = test_total_loss + test_loss.item()
+            # 计算测试数据集上的正确数值的个数
+            accuracy = (output.argmax(1) == target).sum()
+            test_accuracy = test_accuracy + accuracy
+
+    print("测试数据集上的Loss:{}".format(test_total_loss))
+    writer.add_scalar("test_loss", test_total_loss, test_step)
+
+    print("测试数据集上的acc:{}".format(test_accuracy/test_len))
+    writer.add_scalar("test_accuracy" , test_accuracy/test_len, test_step)
+    test_step = test_step + 1
+    torch.save(cnn, "cnn_train_{}.pth".format(i))
+    print("模型已保存！")
+
+
+writer.close()
+```
+
+
+
+### 8、利用GPU训练神经网络的几种设置方法
+
+* 一般来说，需要设置的地方主要有三处：模型、损失函数以及数据
+
+* ```python
+  cnn = model().cuda()
+  loss = nn.CrossEntropyLoss().cuda()
+  imgs = imgs.cuda()
+  ```
+
+* ```python
+  device = torch.device("cpu")
+  model.to(device)
+  ```
+
+* ```python
+  device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+  ```
