@@ -122,4 +122,3 @@ for t = 1:1:1000
 end
 imwrite(imind,map, 'animation_pca_pendulum.gif', 'DelayTime', 0, 'LoopCount', inf)
 ```
-
