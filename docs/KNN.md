@@ -4,7 +4,9 @@
 
 简单来说，KNN可以看成：**有那么一堆你已经知道分类的数据，然后当一个新数据进入的时候，就开始跟训练数据里的每个点求距离，然后挑选这个训练数据最近的K个点，看看这几个点属于什么类型，然后用少数服从多数的原则，给新数据归类**。
 
-<img src="../images/knn.png" alt="KNN" style="zoom:50%;" />
+<p align="center">
+  <img src="../images/KNN.png" weight=400  height=400/>
+</p>
 
 该算法存在的问题：
 
