@@ -32,7 +32,7 @@
 * 机器学习
 
   * [机器学习简明教程](./docs/机器学习简明教程.md)
-  * KNN——K近邻
+  * [KNN——K近邻](./docs/KNN.md)
   * KMeans——K均值
   * Least Squares——最小二乘
   * Logistic Regression——逻辑回归
