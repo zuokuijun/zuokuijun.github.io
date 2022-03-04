@@ -343,17 +343,63 @@ writer.close()
 
 * 一般来说，需要设置的地方主要有三处：模型、损失函数以及数据
 
-* ```python
-  cnn = model().cuda()
-  loss = nn.CrossEntropyLoss().cuda()
-  imgs = imgs.cuda()
-  ```
+* 单GPU 模型训练以及CPU下模型的加载方式
 
-* ```python
-  device = torch.device("cpu")
-  model.to(device)
-  ```
+  ### 单GPU模型训练
 
-* ```python
+  ```python
+  # 定义cuda设备--可以根据当前设备是否支持GPU自动选择模型、损失函数以及数据需要加载的设备类型
   device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+  # 指定模型需要加载的设备类型
+  model.to(device)
+  # 指定损失函数需要加载的设备类型
+  loss = nn.MESLoss()
+  loss = loss.to(device)
+  # 指定数据需要加载的设备类型
+  imgs =  imgs.to(device)
   ```
+ ###        CPU模型加载
+  ```python
+  model = torch.load("CNN_FCN_Adam1000.pth", map_location=torch.device('cpu'))
+  ```
+
+  
+
+* 多GPU 模型训练以及CPU下模型的加载方式 
+
+  ### 多GPU训练
+
+* ```python
+  # 共采用4个GPU进行模型训练
+  device_ids = [0, 1, 2, 3]
+  BATCH_SIZE=64
+  ... ...
+   train_loader = DataLoader(dataset=train_data, batch_size=BATCH_SIZE * len(device_ids), shuffle=True, num_workers=2)
+  
+      
+   # 神经网络初始化
+   cnn = model()
+   # 声明所有可用设备
+   cnn = torch.nn.DataParallel(cnn, device_ids=device_ids)
+   # 模型放在主设备
+   cnn = cnn.cuda(device=device_ids[0])
+   # 数据放在主设备   
+   imgs = imgs.cuda(device=device_ids[0])
+   label = label.cuda(device=device_ids[0])
+   
+  ```
+
+		###       CPU模型加载
+
+```python
+	# 判断当前设备是否支持GPU
+    USE_CUDA = torch.cuda.is_available()
+    device = torch.device("cuda" if USE_CUDA else "cpu")
+	# 模型加载
+    model = torch.load("cnn999.pth", map_location=torch.device('cpu'))
+    # 得到真实的训练模型
+    model = model.module
+```
+
+
+
