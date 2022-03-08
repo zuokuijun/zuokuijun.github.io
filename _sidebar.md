@@ -106,7 +106,7 @@
   *  [30P30N翼型求解](./docs/30p30n_fluent.md)
   *  [NACA0012流场求解](./docs/naca0012.md)
   * [风雷软件-PHengLEI](./docs/PHengLEI)
-  * [数据后处理软件-Tecplot]()
+  * [数据后处理软件-Tecplot](./docs/tecplot.md)
   * [docker](./docs/docker.md)
 
 * 问题汇总分析
