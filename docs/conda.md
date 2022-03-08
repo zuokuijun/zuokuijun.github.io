@@ -38,3 +38,11 @@ jupyter notebook
 jupyter-notebook
 ```
 
+
+
+### 3、pip命令使用阿里云镜像下载安装包
+
+```python
+pip     install     [具体的包名]    -i  https://mirrors.aliyun.com/pypi/simple/ 
+```
+
