@@ -125,6 +125,8 @@
   
   * [电脑组装清单](./docs/电脑组装清单.md)
   
+  * [windows系统下使用pytorch GPU版本的配置过程](./docs/cuda.md)
+  
     
   
     
