@@ -127,6 +127,8 @@
   
   * [windows系统下使用pytorch GPU版本的配置过程](./docs/cuda.md)
   
+  * [Linux系统下显卡驱动的配置过程](./docs/cuda_gpu.md)
+  
     
   
     
