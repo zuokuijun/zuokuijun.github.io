@@ -1,6 +1,8 @@
 
 * [**How to use docsify**](./docs/how-to-use-docsify.md)
   
+* [投稿期刊](./docs/paper.md)
+  
 * C++基础
 
   * 基本数据结构
