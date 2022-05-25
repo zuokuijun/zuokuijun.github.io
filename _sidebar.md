@@ -79,6 +79,10 @@
   * [风雷软件-PHengLEI](./docs/PHengLEI)
   * [数据后处理软件-Tecplot]()
   * [docker](./docs/docker.md)
+  
+* 论文复现
+
+  * [基于深度学习的机翼流场快速重建](./docs/fast_flow.md)
 
 * 问题汇总分析
   
