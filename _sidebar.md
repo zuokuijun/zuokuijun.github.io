@@ -3,6 +3,12 @@
   
 * [投稿期刊](./docs/paper.md)
   
+* Linux工具栈
+  
+  * [git](./docs/git.md)
+  * [flameshot](./docs/flameshot.md)
+  * [pycharm](./docs/pycharm.md)
+  
 * C++基础
 
   * 基本数据结构
