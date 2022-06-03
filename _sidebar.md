@@ -3,6 +3,8 @@
   
 * [投稿期刊](./docs/paper.md)
   
+* [英文论文写作指南](./docs/paper_writing_tips.md)
+  
 * Linux工具栈
   
   * [git](./docs/git.md)
