@@ -10,6 +10,7 @@
   * [git](./docs/git.md)
   * [flameshot](./docs/flameshot.md)
   * [pycharm](./docs/pycharm.md)
+  * [zotero+坚果云同步](./docs/zotero.md)
   
 * C++基础
 
