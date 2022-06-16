@@ -11,6 +11,7 @@
   * [flameshot](./docs/flameshot.md)
   * [pycharm](./docs/pycharm.md)
   * [zotero+坚果云同步](./docs/zotero.md)
+  * [Linux 版Tecplot安装](./docs/tecplot_linux.md)
   
 * C++基础
 
