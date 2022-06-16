@@ -4,11 +4,11 @@
 
 今次工作需要在ubuntu 19.04上安装tecplot2015R1，花掉一个晚上的时间，具体什么原因也说不清，总之是装成了。给同样遇到困惑的小朋友分享一下。
 
-1. 下载破解版的文档（装完就找不到原始下载地址了，我本地有备份，需要的可以私信，邮件发给你）
+### 1、下载破解版的文档（下载链接见底部）
 
-![img](https://pic4.zhimg.com/80/v2-66eb4a6c6da1d97420097ebb1a88f3d3_720w.jpg)
+### ![img](https://pic4.zhimg.com/80/v2-66eb4a6c6da1d97420097ebb1a88f3d3_720w.jpg)
 
-\2. 安装
+### 2、安装
 
 ```bash
 sudo bash tecplot360ex_2015_R1_linux64.sh
@@ -20,7 +20,7 @@ sudo bash tecplot360ex_2015_R1_linux64.sh
 /usr/local/tecplot360ex
 ```
 
-\3. 破解
+### 3、破解
 
 将/usr/local/tecplot360ex 中的文件用*SolidSQUAD*中的相应文件替换
 
@@ -29,7 +29,7 @@ sudo cp dir/tecplot/_SolidSQUAD_/tecplotlm.lic /usr/local/tecplot360ex
 sudo cp dir/tecplot/_SolidSQUAD_/bin/tec360-bin /usr/local/tecplot360ex/bin
 ```
 
-\4. 配置环境文件
+### 4、配置环境文件
 
 ```bash
 vim ~/.bashrc
