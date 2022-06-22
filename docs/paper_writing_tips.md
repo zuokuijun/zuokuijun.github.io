@@ -19,16 +19,18 @@
   **Examples 1:**
 
   <p align="center">
-      <img src="./images/too_long_example.png" />
+      <img src="../images/too_long_example.png" />
   </p>
+
 
    另外一种经常出现在科技类论文中的超长句子是列表中的句子，比如作者想给出大量的数据，并将这些信息放入一个超级长的段落句中。然而，这类参数做好的表述方式是将其用一个带符号的列表进行展示。
 
   **Example 2**
 
   <p align="center">
-      <img src="./images/too_long_example2.png"/>
+      <img src="../images/too_long_example2.png"/>
   </p>
+
   
 
 ### 1.2  [ ]  阐述中心思想的句式，首先说明目的、原因等
@@ -38,12 +40,13 @@
   **Example**
 
   <p align="center">
-      <img src="./images/main_idea1.png"/>
+      <img src="../images/main_idea1.png"/>
   </p>
 
   <p align="center">
-      <img src="./images/main_idea2.png"/>
+      <img src="../images/main_idea2.png"/>
   </p>
+
 
 
 ## 2. 句式写法
@@ -52,15 +55,17 @@
 ## 2.1 [ ] 避免将表示时间的短语放在句子的开头
 
   <p align="center">
-      <img src="./images/time_phrases.png"/>
+      <img src="../images/time_phrases.png"/>
   </p>
+
   
 
 ### 2.2 [ ] 避免为了强调将`the most Important subject `放在整句话的开头
 
   <p align="center">
-      <img src="./images/most_important_subject.png"/>
+      <img src="../images/most_important_subject.png"/>
   </p>
+
   
 
   
@@ -76,14 +81,16 @@
    1、Respectively被放错位置
 
   <p align="center">
-      <img src="./images/respectively1.png"/>
+      <img src="../images/respectively1.png"/>
   </p>
+
 
    2、Respectively插入表示某些操作的顺序，但是该顺序已经在句子的其他地方暗示了。
 
   <p align="center">
-      <img src="./images/respectively2.png"/>
+      <img src="../images/respectively2.png"/>
   </p>
+
   
 
 ### 3.2 [ ]  In this paper,  In this study
@@ -101,8 +108,9 @@
   **Example:**
 
   <p align="center">
-      <img src="./images/paper_study.png"/>
+      <img src="../images/paper_study.png"/>
   </p>
+
 
   "study"是作者所做的工作，"paper"是呈现这部作品的方式，也是读者所持有或者阅读的内容。当然，作者也可以使用其他短语，如：**"in this research"**    **"this paper present"**
 
@@ -114,15 +122,16 @@
   * [ ] "such as " 和"etc." 经常被一些作者错误使用。"such as" 用于举例，通常表示接下来是一个不完整的列表；而"etc."表示等等的意思，主要放在末尾。因此将"such as" 以及"etc."放在一起使用是多余的。
 
   <p align="center">
-      <img src="./images/such_as1.png"/>
+      <img src="../images/such_as1.png"/>
   </p>
+
 
   - [ ] "such as"意味着将给出不完整的列表，在给出完整的列表时不应该使用。
 
-
   <p align="center">
-      <img src="./images/such_as2.png"/>
+      <img src="../images/such_as2.png"/>
   </p>
+
 
 
 
@@ -149,16 +158,18 @@
    **Examples:**
 
   <p align="center">
-      <img src="./images/a_the_example.png"/>
+      <img src="../images/a_the_example.png"/>
   </p>
+
 
   这里只使用了一个"3D modeling tool"， 因此这里特别表示的是这个"3D modeling tool"表示特指，不是指的一类"3D modeling tool"
 
   关于在论文写作中，何时使用"a/an"，何时使用"the"，可以参考下面的流程图逐一对照进行修改。
 
   <p align="center">
-      <img src="./images/a_an_the.png"/>
+      <img src="../images/a_an_the.png"/>
   </p>
+
   
 
 ## 5. 格式等
@@ -174,7 +185,7 @@
     "figure" 、"Fig"、"fig"的混用。并且在句子的开头单词不需要缩写，在单词缩写和数字之间有一个空格。
   
   <p align="center">
-      <img src="./images/table_figure.png"/>
+      <img src="../images/table_figure.png"/>
   </p>
   
 * [ ] **变量**特别是英文字母中的变量需要采用斜体的方式表示，以区别英文单词。
@@ -182,7 +193,7 @@
 * [ ] 需要主要大写字母不要放在句子中间的位置。
 
     <p align="center">
-        <img src="./images/capitals.png"/>
+        <img src="../images/capitals.png"/>
     </p>
     
 * [ ] Numbers and Equations（阿拉伯数字和方程式的错误使用）
@@ -190,27 +201,29 @@
   * [ ] 两个非常常见的错误是关于阿拉伯数字和方程式的表示。中国作者通常写阿拉伯数字而不是拼写单词，这本身是没有问题的，但是其不应该出现在句子的开头。
 
   <p align="center">
-      <img src="./images/numbers.png"/>
+      <img src="../images/numbers.png"/>
   </p>
+  
   
   * [ ] 方程式出现在句子中的错误更为致命：
   
   <p align="center">
-      <img src="./images/equations.png"/>
+      <img src="../images/equations.png"/>
   </p>
+  
   
 
 
 * [ ] 避免一些短语出现冗余
 
   <p align="center">
-      <img src="./images/redundancy.png"/>
+      <img src="../images/redundancy.png"/>
   </p>
 
 * [ ]  某些词要求修饰它们的名词是复数的
 
     <p align="center">
-        <img src="./images/plural.png"/>
+        <img src="../images/plural.png"/>
     </p>
 
 * [ ] 记住永远不要写以缩写和阿拉伯数字开头的英文句子，如Fig. 和8。采用Figure 和Eight代替！！！
@@ -220,7 +233,7 @@
 * [ ]  Never write ‘How to…’ at the beginning of a sentence
 
     <p align="center">
-        <img src="./images/how_to.png"/>
+        <img src="../images/how_to.png"/>
     </p>
 
 * [ ] 不要写***the results are showed as Figure 2*** ，可以写成*** the results are shown in Figure 2***
@@ -228,7 +241,7 @@
 * [ ]  在科技类论文中，不要使用***Obviously***这个词
 
   <p align="center">
-      <img src="./images/obviously.png"/>
+      <img src="../images/obviously.png"/>
   </p>
 
 * [ ]   国际性论文不要出现 ***at home*** 、***abroad***、***here***、***our country***等字眼
