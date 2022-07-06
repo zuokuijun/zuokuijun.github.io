@@ -3,6 +3,33 @@
   
 * [投稿期刊](./docs/paper.md)
   
+* [英文论文写作指南](./docs/paper_writing_tips.md)
+  
+* 机器学习基础篇
+  
+  * 数学与编程基础
+  * 常规机器学习模型
+    * 朴素贝叶斯
+    * 决策树
+    * 支持向量机
+    * 聚类方法
+    * 降维方法
+    * 概率图模型
+    * 半监督学习
+  * 深度学习模型
+    * MLP（多层感知器）
+    * CNN（卷积神经网络）
+    * VAE（变分自动编码器）
+    * GAN（生成式对抗网络）
+  
+* Linux工具栈
+  
+  * [git](./docs/git.md)
+  * [flameshot](./docs/flameshot.md)
+  * [pycharm](./docs/pycharm.md)
+  * [zotero+坚果云同步](./docs/zotero.md)
+  * [Linux 版Tecplot安装](./docs/tecplot_linux.md)
+  
 * C++基础
 
   * 基本数据结构
