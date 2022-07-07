@@ -4,6 +4,10 @@
 * [投稿期刊](./docs/paper.md)
   
 * [英文论文写作指南](./docs/paper_writing_tips.md)
+* 编程工具
+  * [Linux](./docs/linux.md)
+  * [markdown](./docs/mardown.md)
+  * [Latex](./docs/latex.md) 
   
 * 机器学习基础篇
   
