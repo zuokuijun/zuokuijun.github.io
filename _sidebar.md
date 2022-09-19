@@ -143,9 +143,10 @@
   * [数据后处理软件-Tecplot](./docs/tecplot.md)
   * [docker](./docs/docker.md)
   
-* 论文复现
+* 论文分析与讨论
 
   * [基于深度学习的机翼流场快速重建](./docs/fast_flow.md)
+  * [关于多任务学习中，数据不均衡问题的一点思考](./docs/multi-task.md)
 
 * 问题汇总分析
   
