@@ -168,6 +168,8 @@
   
   * [Linux系统下显卡驱动的配置过程](./docs/cuda_gpu.md)
   
+  * [Linux系统新磁盘挂载设置](./docs/mount.md)
+  
     
   
     
