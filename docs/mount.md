@@ -9,7 +9,7 @@
 * sudo  fdisk -l    查看磁盘是否安装正确，这里我们需要挂载的硬盘名为`/dev/sdb` ，如果当前步骤不显示磁盘信息，需要检查接口是否正确连接
 
   <p align="center">
-      <img src="./images/mount1.png" />
+      <img src="./images/mount1.jpg" />
   </p>
 
   
