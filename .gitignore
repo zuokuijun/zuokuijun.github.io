@@ -1,4 +1,6 @@
 # Prerequisites
+.*
+!/.gitignore
 *.d
 
 # Compiled Object files
