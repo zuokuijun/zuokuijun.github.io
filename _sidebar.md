@@ -169,7 +169,7 @@
   * [Linux系统下显卡驱动的配置过程](./docs/cuda_gpu.md)
   
   * [Linux系统新磁盘挂载设置](./docs/mount.md)
-  
+  * [风雷软件运行exe可执行文件报.dll文件缺失问题](./docs/PHengLEI_dll.md)
     
   
     
