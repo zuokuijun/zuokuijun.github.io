@@ -170,8 +170,9 @@
   
   * [Linux系统新磁盘挂载设置](./docs/mount.md)
   * [风雷软件运行exe可执行文件报.dll文件缺失问题](./docs/PHengLEI_dll.md)
+  * [关于大模型中的多GPU训练问题汇总](./docs/multi_GPU.md)
     
-  
+    
     
   
   
