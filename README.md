@@ -1,39 +1,45 @@
 # Zuokuijun's Knowledge Repository
 
 - Github Repository URL：https://github.com/zuokuijun/zuokuijun.github.io
-- Gitee Repository URL:  https://zuokuijun.gitee.io/zuokuijun.github.io
 - Online Reading URL：https://zuokuijun.github.io/#/
 
-## Personal Profile
 
-**School**：Northwestern Polytechnical University（NWPU）——Aircraft Intelligent Sensing and Control Laboratory
 
-**Joint Training Unit**：China Aerodynamics Research and Development Center——State Key Laboratory of Aerodynamics      
+## Paper List
 
-**Research Direction**：Aerodynamics、Machine Learning
+[1]  Fast sparse flow field prediction around airfoils via multi-head perceptron based deep learning architecture. 
 
-## Academic Achievements
-
-【1】 [Fast sparse flow field prediction around airfoils via multi-head perceptron based deep learning architecture](https://www.sciencedirect.com/science/article/abs/pii/S1270963822006162)
-
-In order to obtain the information about flow field, traditional [computational fluid dynamics](https://www.sciencedirect.com/topics/engineering/computational-fluid-dynamics) methods need to solve the Navier-Stokes equations on the mesh with boundary conditions, which is a time-consuming task. In this work, a data-driven method based on [convolutional neural network](https://www.sciencedirect.com/topics/engineering/convolutional-neural-network) and multi-head [perceptron](https://www.sciencedirect.com/topics/engineering/perceptron) is used to predict the incompressible laminar steady sparse flow field around the [airfoils](https://www.sciencedirect.com/topics/engineering/airfoil). Firstly, we use [convolutional neural network](https://www.sciencedirect.com/topics/engineering/convolutional-neural-network) to extract the geometry parameters of the airfoil from the input [gray scale image](https://www.sciencedirect.com/topics/engineering/grayscale-image). Secondly, the extracted [geometric parameters](https://www.sciencedirect.com/topics/engineering/geometric-parameter) together with [Reynolds number](https://www.sciencedirect.com/topics/engineering/reynolds-number), [angle of attack](https://www.sciencedirect.com/topics/engineering/angle-of-attack) and flow field coordinates are used as the input of the multi-layer [perceptron](https://www.sciencedirect.com/topics/engineering/perceptron) and the multi-head perceptron. The proposed multi-head [neural network architecture](https://www.sciencedirect.com/topics/engineering/neural-network-architecture) can predict the [aerodynamic coefficients](https://www.sciencedirect.com/topics/engineering/aerodynamic-coefficient) of the airfoil in seconds. Furthermore, the experimental results show that for sparse flow field, multi-head perceptron can achieve better prediction results than multi-layer perceptron.
-
-<p align="center">
-<img src="./images/CNN_parameters.png" width="900" height="280"/>
-</p>
+ [paper]([Fast sparse flow field prediction around airfoils via multi-head perceptron based deep learning architecture - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1270963822006162)) [code]([zuokuijun/Multi-head-attention-network: Multi-head attention network for airfoil flow field prediction](https://github.com/zuokuijun/Multi-head-attention-network))
 
 
 
-<p align="center">
-<img src="./images/MHP.png" width="800" height="400"/>
-</p>
+[2] Fast aerodynamics prediction of laminar airfoils based on deep attention network
 
-
-
-
-【2】[Fast aerodynamics prediction of low-Reynolds-number airfoil based on deep attention network]()
+  [paper]([Fast aerodynamics prediction of laminar airfoils based on deep attention network | Physics of Fluids | AIP Publishing](https://pubs.aip.org/aip/pof/article-abstract/35/3/037127/2882158/Fast-aerodynamics-prediction-of-laminar-airfoils?redirectedFrom=fulltext)) [code]([zuokuijun/vitAirfoilEncoder: this repository mainly descript how use vision transfrmer encode airfoil to latent code](https://github.com/zuokuijun/vitAirfoilEncoder))
 
  <p align="center">
 <img src="./images/DAN.png" width="800" height="400"/>
 </p>
+[3] Fast simulation of airfoil flow field via deep neural network
 
+​    [paper](https://doi.org/10.1016/j.ast.2024.109207)  [code]([zuokuijun/FU-CBAM-Net: Fu-CBAM-Net deep learning model are used to predict airfoil flow filed](https://github.com/zuokuijun/FU-CBAM-Net))
+
+ <p align="center">
+<img src="./images/FU.png" width="800" height="400"/>
+</p>
+
+[4] CycleMLP++: An efficient and flexible modeling framework for subsonic airfoils
+
+​      [paper](https://doi.org/10.1016/j.eswa.2024.125455) 
+
+[5] A rapid aerodynamic simulation framework for wide-speed-range airfoil flow fields
+
+[6] 3DQLingNet: A deep learning framework for efficient simulation of three-dimensional wing     flow fields.
+
+ <p align="center">
+<img src="./images/3DQLingNet.png" width="800" height="400"/>
+</p>
+
+[7] Intelligent reconstruction method of airfoil flow field based on deep attention network. ICAS  2024.
+
+  [paper]([ICAS2024_0852_paper.pdf](https://www.icas.org/ICAS_ARCHIVE/ICAS2024/data/papers/ICAS2024_0852_paper.pdf))
